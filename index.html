@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NLW Agents</title>
-    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="./style.css" />
 </head>
+
 <body>
     <header>
         <img src="./assets/logo.png" alt="Logo esports NLW">
@@ -13,9 +21,33 @@
 
     <main>
         <section>
-            <h2>Assistente de Meta</h2>
-            <p>Pergunte sobre estratégias, build e dicas para seus jogos!</p>
+            <div>
+                <h2>Assistente de Meta</h2>
+                <p>Pergunte sobre estratégias, build e dicas para seus jogos!</p>
+
+                <form id="form">
+                    <input id="apiKey" type="password" placeholder="Informe a API KEY do Gemini" required>
+
+                    <select id="gameSelect">
+                        <option value="">Selecione um jogo</option>
+                        <option value="valorant">Valorant</option>
+                        <option value="lol">League of Legends</option>
+                        <option value="cs">CS:GO</option>
+                    </select>
+
+                    <input type="text" placeholder="Ex: Melhor build para ADC...">
+                    <button id="askButton">Perguntar</button>
+                </form>
+
+                <div id="aiResponse">
+                    <div class="response-content">
+
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
+    <script src="./script.js"></script>
 </body>
+
 </html>
